@@ -1,0 +1,11 @@
+<h1>Stops</h1>
+
+<ul>
+  <% @stops.each do |stop| %>
+    <li><%= stop_to stop.number, stop_path(stop.id) %></li>
+  <% end %>
+</ul>
+
+<%= stop_to "Add Stop", new_stop_path, :class => "btn btn-default" %>
+
+

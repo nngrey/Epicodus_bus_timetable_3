@@ -1,0 +1,11 @@
+<%= render("layouts/errors", :object => @stop) %>
+
+<%= form_for(@stop) do |f| %>
+  <div class="form-group">
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
+<br>
+<%= link_to "Return Home", stops_path, :class => "btn btn-danger" %>
